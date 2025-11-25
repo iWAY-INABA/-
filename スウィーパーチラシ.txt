@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グリストラップ清掃 スウィーパー営業資料</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .page-break { display: block; page-break-before: always; }
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .no-print { display: none; }
+        }
+        .font-gothic { font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif; }
+        .font-mincho { font-family: "Yu Mincho", "MS PMincho", serif; }
+    </style>
+</head>
+<body class="bg-gray-100 font-gothic text-gray-800">
+
+    <!-- Navigation for Preview -->
+    <div class="no-print bg-gray-800 text-white p-4 sticky top-0 z-50 shadow-md flex justify-between items-center">
+        <h1 class="text-lg font-bold">スウィーパー 営業用チラシ（配置・間隔調整版）</h1>
+        <div class="text-sm">
+            <span class="mr-4">↓ 下にスクロールで「飲食店向け」案があります</span>
+            <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded font-bold">
+                <i class="fas fa-print mr-2"></i>印刷 / PDF保存
+            </button>
+        </div>
+    </div>
+
+    <!-- =========================================
+         チラシ案1：コンビニエンスストア向け
+         修正：上段左右均等化、中段との間隔拡大
+    ========================================== -->
+    <div class="max-w-[210mm] mx-auto bg-white shadow-xl my-8 overflow-hidden relative h-[297mm] flex flex-col">
+        
+        <!-- Header -->
+        <header class="bg-gradient-to-r from-green-600 to-emerald-500 text-white p-5 relative shrink-0">
+            <div class="relative z-10">
+                <div class="flex justify-between items-start mb-1">
+                    <span class="bg-white text-green-700 text-xs font-bold px-2 py-0.5 rounded">コンビニエンスストア オーナー様・店長様へ</span>
+                    <span class="text-yellow-300 text-sm font-bold"><i class="fas fa-star mr-1"></i>店舗運営の課題を解決</span>
+                </div>
+                <h1 class="text-3xl font-bold leading-tight mb-2">
+                    「店舗運営の効率化」と「衛生管理の徹底」<br>
+                    グリストラップ清掃で実現します。
+                </h1>
+                <p class="text-sm opacity-90">
+                    清掃業務はプロにお任せ。スタッフ様は本来の業務（接客・調理）に集中できる環境へ。
+                </p>
+            </div>
+            <div class="absolute right-0 bottom-0 text-green-700 opacity-20 text-8xl">
+                <i class="fas fa-store"></i>
+            </div>
+        </header>
+
+        <!-- Main Problem & Solution (Modified Layout: Equal Widths & Bottom Margin) -->
+        <!-- mb-6を追加して下のセクションとの間隔を確保 -->
+        <section class="px-6 pt-6 pb-2 flex-grow-0 mb-4">
+            <div class="flex gap-6 h-full">
+                <!-- Left: Problems (Changed width to w-1/2) -->
+                <div class="w-1/2 flex flex-col justify-center">
+                    <h2 class="text-green-700 font-bold text-lg border-b-2 border-green-500 pb-1 mb-3">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>こんなお悩みありませんか？
+                    </h2>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-500 mt-1 mr-2 text-lg"></i>
+                            <span class="leading-relaxed">清掃の手間を無くし、<strong>接客や売り場作り</strong>に時間を割きたい。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-500 mt-1 mr-2 text-lg"></i>
+                            <span class="leading-relaxed">忙しくて清掃が行き届かず、<strong>悪臭や害虫</strong>が発生。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-500 mt-1 mr-2 text-lg"></i>
+                            <span class="leading-relaxed">コンプライアンス順守のため、<strong>適切な処理</strong>を徹底したい。</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right: Solution (Changed width to w-1/2) -->
+                <div class="w-1/2 bg-green-50 p-4 rounded-lg border border-green-200 shadow-sm">
+                    <div class="text-center mb-3">
+                        <h2 class="text-green-800 font-bold text-lg leading-tight">その課題、<br>「スウィーパー」が解決します！</h2>
+                    </div>
+                    
+                    <!-- 4つの安心 Grid Layout -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-white border-l-4 border-green-400 p-2 shadow-sm rounded-sm">
+                            <h4 class="font-bold text-green-800 text-xs mb-1">① 徹底した手作業</h4>
+                            <p class="text-[10px] text-gray-600 leading-tight">機械で取り切れない細部はスタッフが手作業で清掃。</p>
+                        </div>
+                        <div class="bg-white border-l-4 border-green-400 p-2 shadow-sm rounded-sm">
+                            <h4 class="font-bold text-green-800 text-xs mb-1">② コンプライアンス</h4>
+                            <p class="text-[10px] text-gray-600 leading-tight">ゴミは「事業系一般廃棄物」として処理可。マニフェスト対応。</p>
+                        </div>
+                        <div class="bg-white border-l-4 border-green-400 p-2 shadow-sm rounded-sm">
+                            <h4 class="font-bold text-green-800 text-xs mb-1">③ 報告書提出</h4>
+                            <p class="text-[10px] text-gray-600 leading-tight">「ビフォーアフター写真」付き報告書で見える化。</p>
+                        </div>
+                        <div class="bg-white border-l-4 border-green-400 p-2 shadow-sm rounded-sm">
+                            <h4 class="font-bold text-green-800 text-xs mb-1">④ 大手導入実績</h4>
+                            <p class="text-[10px] text-gray-600 leading-tight font-bold">
+                                セブンイレブン / ファミリーマート等<br>大手チェーン導入済み
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology & Comparison (Added top spacing via previous section's margin) -->
+        <section class="bg-gray-50 py-5 px-6 border-y border-gray-200 shrink-0">
+            <h3 class="text-center font-bold text-lg mb-4">
+                独自開発マシン <span class="text-red-600">「バッQ」</span> でコストも廃棄量も削減
+            </h3>
+            
+            <div class="flex items-stretch gap-6 text-sm justify-center">
+                <!-- 従来 -->
+                <div class="w-5/12 bg-gray-200 p-3 rounded-lg relative">
+                    <div class="absolute -top-2 left-4 bg-gray-500 text-white text-[10px] px-2 py-0.5 rounded">一般的なバキューム清掃</div>
+                    <p class="font-bold mb-1 text-center mt-1">汚泥＋大量の水</p>
+                    <div class="flex justify-center mb-1">
+                        <i class="fas fa-truck text-3xl text-gray-400"></i>
+                    </div>
+                    <p class="text-[10px] mb-1 text-center">水も一緒に吸い上げるため、廃棄物の量が膨大に。</p>
+                    <div class="bg-white p-1 rounded text-center border border-gray-300 mx-auto w-3/4">
+                        <p class="text-[10px] font-bold text-gray-500">産廃処分量</p>
+                        <p class="text-lg font-bold text-gray-700">数百 kg</p>
+                        <p class="text-[10px] text-red-500 font-bold">コスト高</p>
+                    </div>
+                </div>
+
+                <!-- スウィーパー -->
+                <div class="w-5/12 bg-white border-2 border-green-500 p-3 rounded-lg shadow-lg relative">
+                    <div class="absolute -top-2 left-4 bg-red-600 text-white text-[10px] px-2 py-0.5 rounded font-bold">スウィーパー方式</div>
+                    <p class="font-bold mb-1 text-center mt-1 text-green-700">汚れだけを「濾過・回収」</p>
+                    <div class="flex justify-center mb-1 text-green-600">
+                        <i class="fas fa-filter text-3xl"></i>
+                        <i class="fas fa-arrow-right mx-2 mt-2"></i>
+                        <i class="fas fa-trash-alt text-3xl"></i>
+                    </div>
+                    <p class="text-[10px] mb-1 text-center">スカム（油脂）と汚泥だけを濾し取り、水分は戻します。</p>
+                    <div class="bg-green-100 p-1 rounded text-center border border-green-200 mx-auto w-3/4">
+                        <p class="text-[10px] font-bold text-green-800">廃棄物量</p>
+                        <p class="text-lg font-bold text-red-600">数 kg ～ 数十 kg</p>
+                        <p class="text-[10px] text-green-700 font-bold">大幅なコスト削減</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study -->
+        <section class="p-6 flex-grow flex flex-col justify-center">
+            <div class="bg-white rounded h-full flex flex-col justify-center">
+                <p class="text-lg font-bold text-gray-700 mb-4 text-center border-b border-gray-200 pb-2">
+                    <i class="fas fa-camera mr-2"></i>清掃事例
+                </p>
+                
+                <div class="flex justify-center items-center gap-8 h-48">
+                    <!-- Before -->
+                    <div class="relative h-full aspect-square overflow-hidden rounded shadow-lg border border-gray-300 bg-gray-200">
+                        <img src="image_b809f1.png" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x400?text=Before';" 
+                                alt="清掃前" class="w-full h-full object-cover">
+                        <span class="absolute top-2 left-2 bg-gray-800 text-white text-sm px-3 py-1 rounded shadow">Before</span>
+                    </div>
+                    
+                    <!-- Arrow Icon -->
+                    <div class="text-green-500 text-4xl">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                    <!-- After -->
+                    <div class="relative h-full aspect-square overflow-hidden rounded shadow-lg border-2 border-green-500 bg-white">
+                        <img src="image_b809f1.png" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x400?text=After';"
+                                alt="清掃後" class="w-full h-full object-cover">
+                        <span class="absolute top-2 left-2 bg-red-600 text-white text-sm px-3 py-1 rounded font-bold shadow">After</span>
+                        <div class="absolute bottom-3 right-3 bg-yellow-300 text-black text-xs font-bold px-3 py-1 rounded shadow">
+                            手作業仕上げでピカピカに
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-center text-gray-500 mt-4">※実際の現場写真です。汚れの状況により作業内容は異なります。</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-3 mt-auto shrink-0">
+            <div class="flex justify-between items-center">
+                <div class="text-[10px] text-gray-400">
+                    <p>各自治体条例・廃掃法を遵守し、適正に処理します。</p>
+                </div>
+                <div class="text-right">
+                    <div class="flex items-end justify-end gap-2">
+                        <span class="text-xs mb-1">まずはお見積り・無料相談から</span>
+                        <span class="text-xl font-bold text-yellow-400 leading-none">0123-45-6789</span>
+                    </div>
+                    <p class="text-[9px] text-gray-400">受付時間: 平日 9:00〜18:00</p>
+                </div>
+            </div>
+            <div class="mt-2 pt-1 border-t border-gray-600 text-center text-xs font-bold">
+                株式会社スウィーパー福島
+            </div>
+        </footer>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- =========================================
+         チラシ案2：飲食店向け
+         変更なし
+    ========================================== -->
+    <div class="max-w-[210mm] mx-auto bg-white shadow-xl my-8 overflow-hidden relative h-[297mm] flex flex-col">
+        
+        <!-- Header -->
+        <header class="bg-orange-600 text-white p-6 relative overflow-hidden shrink-0">
+            <div class="relative z-10">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="bg-white text-orange-600 text-xs font-bold px-2 py-1 rounded">飲食店オーナー様・料理長様 必見</span>
+                    <span class="text-yellow-200 text-sm font-bold"><i class="fas fa-yen-sign mr-1"></i>コスト削減の決定版</span>
+                </div>
+                <h1 class="text-3xl font-black leading-tight font-mincho mb-2">
+                    「産廃コストの大幅削減」と<br>
+                    「プロの洗浄力」を両立。
+                </h1>
+                <p class="text-base font-bold">
+                    独自技術で汚泥を<span class="bg-white text-orange-600 px-2 py-0.5 rounded mx-1">大幅に</span>減量化。<br>
+                    グリストラップ清掃の革命的コストダウン。
+                </p>
+            </div>
+            <!-- Background deco -->
+            <div class="absolute -right-10 -top-10 w-64 h-64 bg-orange-500 rounded-full opacity-50"></div>
+        </header>
+
+        <!-- Comparison / Logic -->
+        <section class="p-5 pb-2 shrink-0">
+            <div class="text-center mb-3">
+                <h2 class="text-xl font-bold text-gray-800 mb-1">なぜ、そんなに安くなるのか？</h2>
+                <p class="text-xs text-gray-600">その秘密は、廃棄物を「水ごと捨てる」か「濾して捨てる」かの違いです。</p>
+            </div>
+
+            <div class="flex gap-4 items-center justify-center mb-2">
+                <!-- Left: Bad -->
+                <div class="w-5/12 text-center opacity-70 grayscale">
+                    <h3 class="font-bold text-gray-600 mb-1 text-xs">一般的なバキューム清掃</h3>
+                    <div class="border border-gray-300 p-2 rounded bg-gray-100 h-32 flex flex-col justify-center items-center">
+                        <i class="fas fa-truck-moving text-2xl mb-1 text-gray-400"></i>
+                        <p class="font-bold text-xs">廃棄物：<span class="text-base">数百 kg</span></p>
+                        <div class="mt-1 bg-gray-600 text-white text-[9px] px-2 py-0.5 rounded">全て産業廃棄物（高額）</div>
+                    </div>
+                </div>
+
+                <!-- VS -->
+                <div class="w-1/12 text-center">
+                    <span class="text-2xl font-black text-orange-600 italic">VS</span>
+                </div>
+
+                <!-- Right: Good -->
+                <div class="w-5/12 text-center">
+                    <h3 class="font-bold text-orange-600 mb-1 text-sm">スウィーパー方式</h3>
+                    <div class="border-2 border-orange-500 p-2 rounded bg-orange-50 h-36 shadow-lg flex flex-col justify-center items-center transform scale-105">
+                        <div class="bg-red-600 text-white text-[9px] font-bold px-2 py-0.5 rounded absolute -top-2">独自開発 バッQ</div>
+                        <i class="fas fa-filter text-2xl mb-1 text-orange-500"></i>
+                        <p class="font-bold text-xs">廃棄物：<span class="text-lg text-red-600">数 kg</span></p>
+                        <div class="mt-1 bg-orange-600 text-white text-[9px] px-2 py-0.5 rounded">一般廃棄物として処理可</div>
+                        <p class="text-[9px] text-orange-800 mt-1 font-bold">※産廃処理費を大幅カット！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before / After -->
+        <section class="px-6 py-2 shrink-0">
+            <div class="border-t border-b border-gray-200 py-3">
+                <h3 class="text-center font-bold text-base text-gray-800 mb-3">
+                    <i class="fas fa-magic text-orange-500 mr-2"></i>ここまできれいになります
+                </h3>
+                <div class="flex justify-center gap-3 px-4">
+                    <!-- Before -->
+                    <div class="w-1/2 relative aspect-square overflow-hidden rounded shadow-md border border-gray-400">
+                        <img src="image_b809f1.png" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/400x400?text=Before';"
+                             alt="清掃前" class="w-full h-full object-cover">
+                        <span class="absolute top-2 left-2 bg-black bg-opacity-80 text-white text-xs px-3 py-1 rounded">清掃前</span>
+                    </div>
+                    <!-- After -->
+                    <div class="w-1/2 relative aspect-square overflow-hidden rounded shadow-md border-2 border-orange-500">
+                        <img src="image_b809f1.png" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/400x400?text=After';"
+                             alt="清掃後" class="w-full h-full object-cover">
+                        <span class="absolute top-2 left-2 bg-red-600 text-white text-xs px-3 py-1 rounded font-bold shadow">清掃後</span>
+                        <div class="absolute -bottom-3 -right-3 bg-yellow-400 text-gray-900 text-[10px] font-bold px-2 py-1 rounded shadow transform -rotate-6">
+                            底の汚れも除去！
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-[9px] text-gray-400 mt-1">※実際の現場写真です。</p>
+            </div>
+        </section>
+
+        <!-- Detail & Trust -->
+        <section class="bg-white border-t-4 border-orange-500 px-6 py-4 flex-grow flex flex-col justify-center">
+            <div class="flex gap-6 items-start">
+                <!-- Feature -->
+                <div class="w-1/2 border-r border-gray-300 pr-4">
+                    <h3 class="text-orange-600 font-bold text-sm mb-2 border-b border-orange-200 pb-1">
+                        <i class="fas fa-hand-sparkles mr-2"></i>機械 ＋ 手作業の徹底清掃
+                    </h3>
+                    <p class="text-xs leading-relaxed text-gray-700">
+                        バキュームで吸うだけでは取れない槽の底や角の汚れ。<br>
+                        スウィーパーは専用機「バッQ」で攪拌・洗浄し、最終仕上げは必ず人の手でブラッシング。悪臭の元を根こそぎ除去します。
+                    </p>
+                </div>
+                <!-- Track Record -->
+                <div class="w-1/2 pl-2">
+                    <h3 class="text-orange-600 font-bold text-sm mb-2 border-b border-orange-200 pb-1">
+                        <i class="fas fa-store mr-2"></i>大手飲食チェーン 導入実績
+                    </h3>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-bold text-center">
+                        <div class="bg-gray-100 text-gray-800 p-2 rounded border border-gray-200">丸亀製麺 様</div>
+                        <div class="bg-gray-100 text-gray-800 p-2 rounded border border-gray-200">サイゼリヤ 様</div>
+                        <div class="bg-gray-100 text-gray-800 p-2 rounded border border-gray-200">かつや 様</div>
+                        <div class="bg-gray-100 text-gray-800 p-2 rounded border border-gray-200">コメダ珈琲店 様</div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 mt-2 text-right">他多数（順不同）</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-3 mt-auto shrink-0">
+            <div class="flex justify-between items-center">
+                <div class="text-[10px] text-gray-400">
+                    <p>各自治体条例・廃掃法を遵守し、適正に処理します。</p>
+                </div>
+                <div class="text-right">
+                    <div class="flex items-end justify-end gap-2">
+                        <span class="text-xs mb-1">まずはお見積り・無料相談から</span>
+                        <span class="text-xl font-bold text-yellow-400 leading-none">0123-45-6789</span>
+                    </div>
+                    <p class="text-[9px] text-gray-400">受付時間: 平日 9:00〜18:00</p>
+                </div>
+            </div>
+            <div class="mt-2 pt-1 border-t border-gray-600 text-center text-xs font-bold">
+                株式会社スウィーパー福島
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
