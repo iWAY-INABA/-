@@ -11,8 +11,7 @@
             @page { margin: 0; }
             body { margin: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             .page-break { display: block; page-break-before: always; }
-            /* 修正点：!importantをつけて強制的に非表示にします */
-            .no-print { display: none !important; }
+            .no-print { display: none; }
         }
         .font-gothic { font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif; }
         .font-mincho { font-family: "Yu Mincho", "MS PMincho", serif; }
@@ -20,20 +19,11 @@
 </head>
 <body class="bg-gray-100 font-gothic text-gray-800">
 
-    <!-- Navigation for Preview -->
-    <div class="no-print bg-gray-800 text-white p-4 sticky top-0 z-50 shadow-md flex justify-between items-center">
-        <h1 class="text-lg font-bold">スウィーパー 営業用チラシ（ヘッダー非表示修正版）</h1>
-        <div class="text-sm">
-            <span class="mr-4">↓ 下にスクロールで「飲食店向け」案があります</span>
-            <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded font-bold">
-                <i class="fas fa-print mr-2"></i>印刷 / PDF保存
-            </button>
-        </div>
-    </div>
+    <!-- Navigation Bar Removed -->
 
     <!-- =========================================
          チラシ案1：コンビニエンスストア向け
-         修正：印刷用CSSの強化のみ（コンテンツ変更なし）
+         修正：ナビゲーションバー削除
     ========================================== -->
     <div class="max-w-[210mm] mx-auto bg-white shadow-xl my-0 overflow-hidden relative h-[297mm] flex flex-col">
         
